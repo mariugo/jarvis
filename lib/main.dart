@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jarvis/pages/home_page.dart';
+import 'package:jarvis/theme/app_theme.dart';
 
 void main() {
   runApp(const JarvisApp());
@@ -11,9 +12,8 @@ class JarvisApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: AppTheme.lightTheme(),
+      darkTheme: AppTheme.darkTheme(),
       home: const HomePage(),
     );
   }
